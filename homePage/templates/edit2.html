@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'cssstyle.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{employee.id}}">
+        {% csrf_token %}
+    <div class="edit2-form">
+<br>
+
+    <h3>Update Details</h3>
+
+Employee Id:
+
+        <input type="text" name="eid" id="id_eid" required maxlength="20" value="{{ employee.eid }}"/>
+      <br>
+Employee Name:
+
+        <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}" />
+<br>
+Employee Email:
+        <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{ employee.eemail }}" />
+<br>
+    <button type="submit" class="btn btn-success">Update</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD Application</title>
+	{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssstyle.css' %}">
+</head>
+<body>
+<div class="form-content">
+	<form method="POST" action="/emp">
+		{% csrf_token %}
+	<h3>Enter Details..!!</h3>
+	Employee ID : {{ form.eid}}
+	<br>
+	Employee Name : {{ form.ename }}
+	<br>
+	Employee E-mail : {{ form.eemail}}
+	<br>
+	<button type="submit">Submit</button>
+	</form>
+</div>
+</body>
+</html>

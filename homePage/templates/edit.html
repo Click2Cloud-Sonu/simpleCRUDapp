@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Employee data</title>
+
+	{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssstyle.css' %}">
+
+</head>
+<body>
+	<div class="edit-form">
+<form method="POST" action="/update/{{ employee.id}}">
+	{% csrf_token %}
+	<h3>Update details..!</h3>
+	<br><br>
+	Employee ID : <input type="text" name="eid" id="id_eid" value="{{ employee.eid}}" />
+	<br><br>
+	Employee Name : <input type="text" name="ename" id="id_ename" value="{{ employee.ename}}" />
+	<br><br>
+	Employee Email : <input type="text" name="eemail" id="id_email" value="{{ employee.eemail}}" />
+	<br><br>
+	<button type="submt">Update</button>
+</form>
+</div>
+</body>
+</html>

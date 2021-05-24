@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Data !</title>
+
+	{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cssstyle.css' %}">
+
+</head>
+<body>
+	<div class="emp-data">
+		<div class="heading" style="text-align:center;">
+			<h3 style=" width:250px; height:25px;border:2px solid black; background:#ccccff;padding:2px 5px 2px 5px;">Employee Information .!</h3></div>
+		<table style="border:2px solid black; padding: 10px;text-align:center">
+			<thead>
+				<tr>
+					<th>Employee ID</th>
+					<th>Employee Name</th>
+					<th>Employee E-mail id</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for emp in employee %}
+				<tr>
+					<td>{{ emp.eid }}</td>
+					<td>{{ emp.ename }}</td>
+					<td>{{ emp.eemail }}</td>
+					<td>
+						<a href="/edit/{{ emp.id }}">Edit</a>&nbsp;&nbsp;
+						<a href="/delete/{{ emp.id }}">Delete</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<br><br>
+		<a href="/emp">Add New Employee details..!</a>
+	</div>
+
+</body>
+</html>

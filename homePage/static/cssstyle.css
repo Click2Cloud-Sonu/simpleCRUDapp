@@ -1,0 +1,57 @@
+.agileits-login{
+  width: auto;
+  height: 30%;
+
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+	background: linear-gradient(to bottom, #0099cc 0%, #ffffff 100%);
+
+}
+
+.form-content{
+	border :5px solid red;
+	border-radius: 30px;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	padding: 100px;
+	background: linear-gradient(to top, #33ccff 0%, #ffff99 100%);
+}
+.emp-data{
+	border :5px solid red;
+	border-radius: 30px;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	padding: 100px;
+	background: linear-gradient(to left, #ffffff 0%, #ff99ff 100%);
+}
+td{
+	border:2px solid black;
+	background: #66ffff;
+	padding:5px;
+
+}
+th{
+	border:2px solid black;
+	background:yellow;
+	color:red;
+
+}
+.edit-form{
+	border :5px solid red;
+	border-radius: 30px;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	padding: 100px;
+	background: linear-gradient(to top, #ccffff 0%, #ffcccc 100%);
+}
